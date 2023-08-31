@@ -44,6 +44,23 @@ namespace ComputerLabLibrary.Migrations
 
                     b.ToTable("computer");
                 });
+
+            modelBuilder.Entity("ComputerLabLibrary.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("deptname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("department");
+                });
 #pragma warning restore 612, 618
         }
     }

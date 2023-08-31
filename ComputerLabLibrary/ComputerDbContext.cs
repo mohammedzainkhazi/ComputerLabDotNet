@@ -11,6 +11,8 @@ namespace ComputerLabLibrary
     {
         public ComputerDbContext(DbContextOptions<ComputerDbContext> options) : base(options) { }
 
-        public DbSet<ComputerLabModel> computer { get; set; } 
+        public DbSet<ComputerLabModel> computer { get; set; }
+        public DbSet<Department> department { get; set; }
+
     }
 }

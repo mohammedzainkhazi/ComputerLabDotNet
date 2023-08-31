@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComputerLabLibrary.Migrations
 {
     [DbContext(typeof(ComputerDbContext))]
-    [Migration("20230831060955_ComputerLabLibrary")]
+    [Migration("20230831065752_ComputerLabLibrary")]
     partial class ComputerLabLibrary
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,23 @@ namespace ComputerLabLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("computer");
+                });
+
+            modelBuilder.Entity("ComputerLabLibrary.Department", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("deptname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("department");
                 });
 #pragma warning restore 612, 618
         }
