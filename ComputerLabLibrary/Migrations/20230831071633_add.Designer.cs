@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComputerLabLibrary.Migrations
 {
     [DbContext(typeof(ComputerDbContext))]
-    [Migration("20230831065752_ComputerLabLibrary")]
-    partial class ComputerLabLibrary
+    [Migration("20230831071633_add")]
+    partial class add
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -4,7 +4,7 @@
 
 namespace ComputerLabLibrary.Migrations
 {
-    public partial class ComputerLabLibrary : Migration
+    public partial class add : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
